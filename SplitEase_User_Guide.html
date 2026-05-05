@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SplitEase User Guide</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #e5eefb;
+      --muted: #9fb0c9;
+      --accent: #34d399;
+      --accent-2: #2dd4bf;
+      --warn: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(52, 211, 153, 0.18), transparent 30%),
+        radial-gradient(circle at left center, rgba(45, 212, 191, 0.14), transparent 25%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 28px 64px;
+    }
+    .hero {
+      padding: 36px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      backdrop-filter: blur(18px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(52, 211, 153, 0.14);
+      color: #bff7e1;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1, h2, h3 { line-height: 1.2; margin-top: 0; }
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      margin-bottom: 14px;
+    }
+    h2 {
+      margin-top: 42px;
+      margin-bottom: 14px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 22px;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    p, li { color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .card {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--panel);
+    }
+    .card strong { color: var(--text); }
+    .badge {
+      display: inline-block;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      font-size: 12px;
+    }
+    .callout {
+      border-left: 4px solid var(--accent);
+      background: rgba(52, 211, 153, 0.08);
+      padding: 16px 18px;
+      border-radius: 14px;
+      margin-top: 18px;
+    }
+    ol, ul { padding-left: 22px; }
+    .step {
+      margin-top: 14px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+    }
+    .footer {
+      margin-top: 38px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .accent { color: var(--accent); }
+    .accent2 { color: var(--accent-2); }
+    .warn { color: #fcd34d; }
+    @media print {
+      body { background: #fff; color: #000; }
+      .hero, .card, .step, .callout { background: #fff; color: #000; box-shadow: none; }
+      p, li, .footer { color: #222; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">SplitEase User Guide</div>
+      <h1>How to use SplitEase and what it is for</h1>
+      <p>
+        SplitEase helps a small group track shared expenses, split bills fairly, see who owes what, and settle balances without manual math.
+        It is built for trips, roommates, events, and any situation where one person pays for a group.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <strong>Purpose</strong>
+          <p>Track shared spending and balance payments in one place.</p>
+        </div>
+        <div class="card">
+          <strong>Best for</strong>
+          <p>Trips, flatmates, friends, events, or team expenses.</p>
+        </div>
+        <div class="card">
+          <strong>Main value</strong>
+          <p>Replaces manual calculations and avoids payment confusion.</p>
+        </div>
+      </div>
+    </section>
+
+    <h2>Core Features</h2>
+    <div class="grid">
+      <div class="card"><strong>Groups</strong><p>Create a group for each trip or shared budget.</p></div>
+      <div class="card"><strong>Expenses</strong><p>Add bills, choose who paid, and split them across members.</p></div>
+      <div class="card"><strong>Categories</strong><p>Tag spending like meals, transport, entertainment, and more.</p></div>
+      <div class="card"><strong>Analytics</strong><p>See total spend, average expense, top categories, and top payers.</p></div>
+      <div class="card"><strong>Filtering</strong><p>Search expenses, filter by category, and sort by amount or date.</p></div>
+      <div class="card"><strong>Settlements</strong><p>Mark balances as paid once money has actually moved.</p></div>
+    </div>
+
+    <h2>How To Use It</h2>
+    <div class="step">
+      <h3>1. Create an account and log in</h3>
+      <p>Sign up with your name, email, and password. After that, log in to access your dashboard.</p>
+    </div>
+    <div class="step">
+      <h3>2. Create a group</h3>
+      <p>Open <span class="accent">Groups</span> and create a group name like <span class="accent2">Weekend Trip</span> or <span class="accent2">Roommates</span>.</p>
+    </div>
+    <div class="step">
+      <h3>3. Add members to the group</h3>
+      <p>For settlement testing or real usage, the group should contain everyone involved in the shared spending.</p>
+    </div>
+    <div class="step">
+      <h3>4. Add expenses</h3>
+      <p>Choose the group, enter the description and amount, pick who paid, select who the expense is split among, and choose a category.</p>
+    </div>
+    <div class="step">
+      <h3>5. Review analytics</h3>
+      <p>The analytics panel shows total expense count, total amount, average spend, top category, category breakdown, and top payers.</p>
+    </div>
+    <div class="step">
+      <h3>6. Filter and search expenses</h3>
+      <p>Use the search bar to find a bill, category pills to narrow results, and the sort dropdown to reorder entries.</p>
+    </div>
+    <div class="step">
+      <h3>7. Settle balances</h3>
+      <p>When the app shows a pending settlement, click <span class="warn">Mark Paid</span> after the payment is completed to close it out.</p>
+    </div>
+
+    <h2>Example Workflow</h2>
+    <div class="callout">
+      <p>
+        Example: three friends go on a trip. One person pays for dinner, another pays for transport, and the app automatically calculates the net balance.
+        The group can then see who owes whom and mark the settlement as paid once money is transferred.
+      </p>
+    </div>
+
+    <h2>Important Notes</h2>
+    <ul>
+      <li>Expenses must belong to members of the group.</li>
+      <li>Categories improve analytics and make filtering easier.</li>
+      <li>Marking a settlement as paid updates its status in the database.</li>
+      <li>If an older expense shows as Other, it was created before category persistence was fixed.</li>
+    </ul>
+
+    <div class="footer">
+      SplitEase is meant to keep shared money simple, transparent, and easy to close out.
+    </div>
+  </main>
+</body>
+</html>

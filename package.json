@@ -1,0 +1,41 @@
+{
+  "name": "splitease",
+  "version": "1.0.0",
+  "description": "SplitEase backend server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:prod": "cross-env NODE_ENV=production node server.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.8.0",
+    "morgan": "^1.10.0",
+    "express-validator": "^7.0.1",
+    "nodemailer": "^6.9.3",
+    "axios": "^1.16.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^1.14.0",
+    "mongoose": "^8.9.5",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.14.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^3.4.17",
+    "vite": "^8.0.10"
+  }
+}
