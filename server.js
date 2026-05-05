@@ -19,7 +19,7 @@ const configuredOrigins = [process.env.CLIENT_URLS, process.env.CLIENT_URL]
   .map((origin) => origin.trim().replace(/\/$/, ""))
   .filter(Boolean);
 
-const localDevOrigins = ["http://localhost:5200", "http://localhost:5173", "http://localhost:3000"];
+const localDevOrigins = ["http://localhost:5200", "http://localhost:5173", "http://localhost:3000", "http://localhost:5000"];
 const allowedOrigins = Array.from(new Set([...configuredOrigins, ...localDevOrigins]));
 
 // Security headers
