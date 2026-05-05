@@ -57,20 +57,7 @@ app.use(
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
-// Serve production frontend build if present
-const path = require("path");
-if (process.env.NODE_ENV === "production") {
-  const staticDir = path.join(__dirname, "dist");
-  app.use(express.static(staticDir));
-  // SPA fallback for non-API routes
-  app.get("/*", (req, res, next) => {
-    if (req.path.startsWith("/api") || req.path.startsWith('/groups') || req.path.startsWith('/auth') || req.path.startsWith('/invite')) {
-      return next();
-    }
 
-    res.sendFile(path.join(staticDir, "index.html"));
-  });
-}
 app.get("/", (req, res) => {
   res.json({ message: "SplitEase API is running" });
 });
